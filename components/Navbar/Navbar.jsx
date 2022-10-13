@@ -13,6 +13,7 @@ import {
   AiFillInstagram,
   AiFillFacebook,
 } from "react-icons/ai";
+import CircuitSubMenuItems from "./CircuitSubMenuItems";
 
 const Navbar = (props) => {
   const [nav, setNav] = useState(false);
@@ -125,76 +126,7 @@ const Navbar = (props) => {
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <div className="px-1 py-1">
-                        <Link href="/homepage">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <button
-                                className={`${
-                                  active
-                                    ? "bg-violet-500 text-white"
-                                    : "text-gray-900"
-                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                              >
-                                <ArchiveIcon active={active} />
-                                Circuit Home
-                              </button>
-                            )}
-                          </Menu.Item>
-                        </Link>
-                      </div>
-                      <div className="px-1 py-1 ">
-                        <Link href="/leaderboard">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <button
-                                className={`${
-                                  active
-                                    ? "bg-violet-500 text-white"
-                                    : "text-gray-900"
-                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                              >
-                                <EditIcon active={active} />
-                                CircuitBoard
-                              </button>
-                            )}
-                          </Menu.Item>
-                        </Link>
-                        <Link href="/events">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <button
-                                className={`${
-                                  active
-                                    ? "bg-violet-500 text-white"
-                                    : "text-gray-900"
-                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                              >
-                                <DuplicateIcon active={active} />
-                                Event List
-                              </button>
-                            )}
-                          </Menu.Item>
-                        </Link>
-                      </div>
-                      <div className="px-1 py-1">
-                        <Link href="/login">
-                          <Menu.Item>
-                            {({ active }) => (
-                              <button
-                                className={`${
-                                  active
-                                    ? "bg-violet-500 text-white"
-                                    : "text-gray-900"
-                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                              >
-                                <DeleteIcon active={active} />
-                                Sign Up
-                              </button>
-                            )}
-                          </Menu.Item>
-                        </Link>
-                      </div>
+                      <CircuitSubMenuItems />
                     </Menu.Items>
                   </Transition>
                 </Menu>
@@ -268,76 +200,7 @@ const Navbar = (props) => {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <Menu.Items className="absolute left-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                        <div className="px-1 py-1">
-                          <Link href="/homepage">
-                            <Menu.Item>
-                              {({ active }) => (
-                                <button
-                                  className={`${
-                                    active
-                                      ? "bg-violet-500 text-white"
-                                      : "text-gray-900"
-                                  } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                                >
-                                  <ArchiveIcon active={active} />
-                                  Circuit Home
-                                </button>
-                              )}
-                            </Menu.Item>
-                          </Link>
-                        </div>
-                        <div className="px-1 py-1 ">
-                          <Link href="/leaderboard">
-                            <Menu.Item>
-                              {({ active }) => (
-                                <button
-                                  className={`${
-                                    active
-                                      ? "bg-violet-500 text-white"
-                                      : "text-gray-900"
-                                  } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                                >
-                                  <EditIcon active={active} />
-                                  CircuitBoard
-                                </button>
-                              )}
-                            </Menu.Item>
-                          </Link>
-                          <Link href="/events">
-                            <Menu.Item>
-                              {({ active }) => (
-                                <button
-                                  className={`${
-                                    active
-                                      ? "bg-violet-500 text-white"
-                                      : "text-gray-900"
-                                  } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                                >
-                                  <DuplicateIcon active={active} />
-                                  Event List
-                                </button>
-                              )}
-                            </Menu.Item>
-                          </Link>
-                        </div>
-                        <div className="px-1 py-1">
-                          <Link href="/login">
-                            <Menu.Item>
-                              {({ active }) => (
-                                <button
-                                  className={`${
-                                    active
-                                      ? "bg-violet-500 text-white"
-                                      : "text-gray-900"
-                                  } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                                >
-                                  <DeleteIcon active={active} />
-                                  Sign Up
-                                </button>
-                              )}
-                            </Menu.Item>
-                          </Link>
-                        </div>
+                        <CircuitSubMenuItems />
                       </Menu.Items>
                     </Transition>
                   </Menu>
