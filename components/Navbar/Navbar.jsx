@@ -1,10 +1,12 @@
 import React, { useState, Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { SiDiscord } from "react-icons/si";
 
-import { ArchiveIcon, EditIcon, DuplicateIcon, DeleteIcon } from "../Icons";
+import navItems from "./navItems";
+import DesktopNavItem from "./DesktopNavItem";
+import MobileNavItem from "./MobileNavItem";
+import colortheme from "./colortheme";
 
 import {
   AiOutlineMenuFold,
@@ -22,24 +24,6 @@ const Navbar = (props) => {
     setNav(!nav);
   };
 
-  const colortheme = (color, type) => {
-    if (color === "light") {
-      if (type === "background") {
-        return "bg-[#aea2e336]";
-      }
-      if (type === "text") {
-        return "text-black";
-      }
-    } else {
-      if (type === "background") {
-        return "bg-[#1e0d44d5]";
-      }
-      if (type === "text") {
-        return "text-white";
-      }
-    }
-  };
-
   return (
     <div
       className={`z-50 fixed w-screen h-[53px] sm:h-[70px] top-0 backdrop-blur ${colortheme(
@@ -51,59 +35,11 @@ const Navbar = (props) => {
         <div className="flex h-10 w-10">
           <img src="/logonav.png" alt="/" width="40" height="40" />
         </div>
-
         <div>
           <ul className="hidden md:flex">
-            <Link href="/">
-              <button>
-                <li
-                  className={`ml-10 text-lg hover:border-b font-bold transition transform hover:-translate-y-[2px] motion-reduce:transition-none motion-reduce:hover:transform-none ${colortheme(
-                    props.color,
-                    "text"
-                  )}`}
-                >
-                  Home
-                </li>
-              </button>
-            </Link>
-            <Link href="/about">
-              <button>
-                <li
-                  className={`ml-10 text-lg hover:border-b font-bold transition transform hover:-translate-y-[2px] motion-reduce:transition-none motion-reduce:hover:transform-none ${colortheme(
-                    props.color,
-                    "text"
-                  )}`}
-                >
-                  About
-                </li>
-              </button>
-            </Link>
-            <Link href="/resources">
-              <button>
-                <li
-                  className={`ml-10 text-lg hover:border-b font-bold transition transform hover:-translate-y-[2px] motion-reduce:transition-none motion-reduce:hover:transform-none ${colortheme(
-                    props.color,
-                    "text"
-                  )}`}
-                >
-                  Resources
-                </li>
-              </button>
-            </Link>
-
-            <Link href="/contact">
-              <button>
-                <li
-                  className={`ml-10 text-lg hover:border-b font-bold transition transform hover:-translate-y-[2px] motion-reduce:transition-none motion-reduce:hover:transform-none ${colortheme(
-                    props.color,
-                    "text"
-                  )}`}
-                >
-                  Contact
-                </li>
-              </button>
-            </Link>
-
+            {navItems.map((item) => (
+              <DesktopNavItem key={item.text} {...item} color={props.color} />
+            ))}
             <li className="ml-10 text-lg hover:border-b font-bold transition transform hover:-translate-y-[2px] motion-reduce:transition-none motion-reduce:hover:transform-none bg-white p-1 px-2 rounded-xl">
               <div className="">
                 <Menu as="div" className="relative inline-block text-left ">
@@ -206,26 +142,9 @@ const Navbar = (props) => {
                   </Menu>
                 </div>
               </li>
-              <Link href="/">
-                <li className="w-full justify-center rounded-md px-4 py-5 text-xl font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-black hover:text-yellow-500">
-                  Home
-                </li>
-              </Link>
-              <Link href="/about">
-                <li className="w-full justify-center rounded-md px-4 py-5 text-xl font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-black hover:text-yellow-500">
-                  About
-                </li>
-              </Link>
-              <Link href="/resources">
-                <li className="w-full justify-center rounded-md px-4 py-5 text-xl font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-black hover:text-yellow-500">
-                  Resources
-                </li>
-              </Link>
-              <Link href="/contact">
-                <li className="w-full justify-center rounded-md px-4 py-5 text-xl font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-black hover:text-yellow-500">
-                  Contact
-                </li>
-              </Link>
+              {navItems.map((item) => (
+                <MobileNavItem key={item.text} {...item} />
+              ))}
             </ul>
             <div className="pt-20">
               <p className="uppercase tracking-widest text-black font-bold pb-5">
