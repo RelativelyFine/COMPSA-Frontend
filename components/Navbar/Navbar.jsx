@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
+import Image from "next/image";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { SiDiscord } from "react-icons/si";
 
@@ -33,7 +34,12 @@ const Navbar = (props) => {
     >
       <div className="flex justify-between items-center w-full h-full px-2 align-items 2xl:px-8">
         <div className="flex h-10 w-10">
-          <img src="/logonav.png" alt="/" width="40" height="40" />
+          <Image
+            src="/logo.png"
+            alt="Compsa logo in purple"
+            width="40"
+            height="40"
+          />
         </div>
         <div>
           <ul className="hidden md:flex">
@@ -75,7 +81,7 @@ const Navbar = (props) => {
           >
             <AiOutlineMenuUnfold size={50} className="text-white" />
           </div>
-          <MobileNav handleNav={handleNav} nav={nav}/>
+          <MobileNav handleNav={handleNav} nav={nav} />
         </div>
       </div>
     </div>

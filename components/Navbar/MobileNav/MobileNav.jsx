@@ -1,4 +1,5 @@
-import React, { useState, Fragment } from "react";
+import React, { Fragment } from "react";
+import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { SiDiscord } from "react-icons/si";
@@ -30,7 +31,12 @@ const MobileNav = ({ handleNav, nav }) => (
     >
       <div>
         <div className="flex w-full items-center justify-between">
-          <img src="/logo.png" alt="/" width="80" height="80" min-width="80" />
+          <Image
+            src="/logo.png"
+            alt="Compsa logo in purple"
+            width="80"
+            height="80"
+          />
           <div
             onClick={handleNav}
             className="square-full shadow-lg shadow-grey-700 cursor-pointer"
