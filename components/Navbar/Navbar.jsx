@@ -1,29 +1,35 @@
 import React, { useState, Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import { SiDiscord } from "react-icons/si";
+import { AiOutlineMenuUnfold } from "react-icons/ai";
 
 import navItems from "./navItems";
-import DesktopNavItem from "./DesktopNavItem";
 import MobileNav from "./MobileNav";
-import colortheme from "./colortheme";
-
-import {
-  AiOutlineMenuFold,
-  AiOutlineMenuUnfold,
-  AiFillLinkedin,
-  AiFillInstagram,
-  AiFillFacebook,
-} from "react-icons/ai";
 import CircuitSubMenuItems from "./CircuitSubMenuItems";
+
+const colortheme = (color, type) => {
+  if (color === "light") {
+    if (type === "background") {
+      return "bg-[#aea2e336]";
+    }
+    if (type === "text") {
+      return "text-black";
+    }
+  } else {
+    if (type === "background") {
+      return "bg-[#1e0d44d5]";
+    }
+    if (type === "text") {
+      return "text-white";
+    }
+  }
+};
 
 const Navbar = (props) => {
   const [nav, setNav] = useState(false);
-
-  const handleNav = () => {
-    setNav(!nav);
-  };
+  const handleNav = () => setNav(!nav);
 
   return (
     <div
@@ -43,8 +49,19 @@ const Navbar = (props) => {
         </div>
         <div>
           <ul className="hidden md:flex">
-            {navItems.map((item) => (
-              <DesktopNavItem key={item.text} {...item} color={props.color} />
+            {navItems.map(({ text, href }) => (
+              <Link href={href} key={text}>
+                <button>
+                  <li
+                    className={`ml-10 text-lg hover:border-b font-bold transition transform hover:-translate-y-[2px] motion-reduce:transition-none motion-reduce:hover:transform-none ${colortheme(
+                      props.color,
+                      "text"
+                    )}`}
+                  >
+                    {text}
+                  </li>
+                </button>
+              </Link>
             ))}
             <li className="ml-10 text-lg hover:border-b font-bold transition transform hover:-translate-y-[2px] motion-reduce:transition-none motion-reduce:hover:transform-none bg-white p-1 px-2 rounded-xl">
               <div className="">
