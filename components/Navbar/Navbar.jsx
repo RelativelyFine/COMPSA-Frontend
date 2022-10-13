@@ -3,7 +3,8 @@ import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { SiDiscord } from "react-icons/si";
-import { ArchiveIcon, EditIcon, DuplicateIcon, DeleteIcon } from "./Icons";
+
+import { ArchiveIcon, EditIcon, DuplicateIcon, DeleteIcon } from "../Icons";
 
 import {
   AiOutlineMenuFold,
