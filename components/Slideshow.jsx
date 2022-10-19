@@ -3,7 +3,7 @@ import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 function App() {
-  const images = ["/pan1.jpg", "/pan2.jpg", "/pan3.jpg"];
+  const images = ["/pan1.jpg", "/pan2.jpg", "/pan3.jpg", "/pan4.jpg"];
 
   //These are custom properties for zoom effect while slide-show
   const zoomInProperties = {
