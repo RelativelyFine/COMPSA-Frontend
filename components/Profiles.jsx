@@ -37,6 +37,33 @@ function InfiniteCSRPage() {
     }
   };
 
+  // Create an empty dictionary to store player information
+  const players = {}
+
+  const populate_players = (value) => {
+    // Algorithm to add information from API request into the players dictionary
+    // If the a players rank already exists
+    if (`${value.place}` in players) {
+      // If the player does not exist within the current rank array, add them to it. If they already do, nothing will happen (this helps avoid duplicates)
+      if (players[`${value.place}`].includes(value.alias) == false) {
+        players[`${value.place}`].push(value.alias);
+      }
+    // If the players rank doesn't exist within the players dictionary
+    } else {
+      // Create an empty array for that specific rank and then add the players name to the array
+      players[`${value.place}`] = [];
+      players[`${value.place}`].push(value.alias);
+    }
+  }
+
+  const determine_score = (value) => {
+    const tied_players = players[`${value.place}`].length; // The number of players tied for a position
+    const rank = value.place; // The position that players are tied for
+    const displayed_rank = tied_players + rank - 1;
+    return displayed_rank;
+  }
+
+
   return (
     <div className="">
       {status === "success" && (
@@ -46,10 +73,15 @@ function InfiniteCSRPage() {
           hasMore={hasNextPage}
           loader={<h4>Loading...</h4>}
         >
+          {data?.pages.map((page) =>
+          {Array.from(page)?.map((value, index) => ( 
+            <>{populate_players(value)}</>
+          ))}
+          )}
           {data?.pages.map((page) => {
             return (
               <>
-                {Array.from(page)?.map((value, index) => (
+                {Array.from(page)?.map((value, index) => ( 
                   <div
                     className="flex w-[90vw] justify-center justify-self-center"
                     key={index}
@@ -63,7 +95,7 @@ function InfiniteCSRPage() {
                       >
                         <div>
                           <span className="bg-white text-[#eaba7d] p-2 rounded-xl">
-                            {value.place}
+                          {determine_score(value)}
                           </span>
                           <span className="">
                             &nbsp;&nbsp;&nbsp;{value.alias}
