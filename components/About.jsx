@@ -182,6 +182,46 @@ const About = () => {
             </div>
           </div>
         </div>
+        <div className="grid w-full h-[42vw] px-[4%] bg-[#EEEBFD]">
+          <div className="grid grid-cols-12 gap-[4%] place-content-center w-full h-full ">
+            <div className="col-span-5 bg-techteam bg-cover rounded-3xl h-[29vw]"></div>
+            <div className="flex flex-col col-span-7 ">
+              <div className=" bg-[#DAD2FF] h-[23vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
+                <div className="text-[4vw] text-[#200263] pb-[1%]">Tech Team</div>
+                <div className=" text-[#200263] pb-[1%]">
+                  Frontend Developer -&gt; David Courtis, Kunalan Kevin Subagaran
+                </div>
+                <div className=" text-[#200263] pb-[1%]">
+                  Frontend Intern -&gt; Adwait Srivastava, Amaan Javed
+                </div>
+                <div className="text-[#200263] pb-[1%]">
+                  Backend Developer -&gt; Logan Cantin
+                </div>
+                
+                <div className=" text-[#200263] pb-[1%]">
+                  Backend Intern -&gt; Nathan Cai
+                </div>
+                <div className=" text-[#200263] pb-[1%]">
+                  UI/UX Designer  -&gt; Amy Cui
+                </div>
+              
+                <div className=" text-[#200263] pb-[1%]">
+                  UI/UX Intern -&gt; Anna Lou
+                </div>
+                <div className=" text-[#200263] pb-[1%]">
+                  Design Intern -&gt; Shabicha Sureshkumar
+                </div>
+              </div>
+              <div className="pt-[0.5vw]">
+                <Link href="">
+                  <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
+                    Tech Team Homepage
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
