@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <div>
+      <div className="fixed w-screen h-[53px] sm:h-[70px]"></div>
       <Header />
       <Resources />
       <Navbar color="light" />
