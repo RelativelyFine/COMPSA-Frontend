@@ -5,7 +5,7 @@ const ButtonGroup = ({ links }) =>
     <ButtonLink
       href={href}
       key={`resource=${text}${subText}`}
-      className={`h-[10.9vw] lg:h-[157px] ${
+      className={`h-[10.9vw] lg:h-[157px] w-[100%] ${
         i < links.length - 1 ? "mb-[5vw] lg:mb-[71px] " : ""
       }bg-[#553ADD] font-bold`}
     >
