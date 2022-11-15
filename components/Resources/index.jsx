@@ -60,8 +60,9 @@ const Resources = () => {
             />
           </div>
         </div>
-        <div className="bg-[#F3F1FF] rounded-[4.5vw] 2xl:rounded-[65px] grid place-items-center">
-          <div className="flex flex-col w-[70vw] max-w-[872px] p-[95px]">
+
+        <div className="bg-[#F3F1FF] rounded-[4.5vw] 2xl:rounded-[65px] grid place-items-center mb-[5vw] lg:mb-[71px]">
+          <div className="flex flex-col w-[70vw] max-w-[872px] py-[95px]">
             <ResourceHeader
               header="Information Packages"
               headerColour={"#200263"}
@@ -72,7 +73,7 @@ const Resources = () => {
         </div>
 
         <div className="bg-[#F3F1FF] rounded-[4.5vw] 2xl:rounded-[65px] grid place-items-center">
-          <div className="flex flex-col w-[70vw] max-w-[872px] p-[95px]">
+          <div className="flex flex-col w-[70vw] max-w-[872px] py-[95px]">
             <ResourceHeader
               header="Information Packages"
               headerColour={"#200263"}
