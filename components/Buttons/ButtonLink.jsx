@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ButtonLink = ({ href, className, children }) => {
   const buttonClasses = [
-    "transition px-[5vw]",
+    "transition",
     "transform",
     "hover:-translate-y-1",
     "motion-reduce:transition-none",
