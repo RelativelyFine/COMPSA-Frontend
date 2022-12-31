@@ -24,6 +24,9 @@ module.exports = {
         academics: "url('/academics.jpg')",
         yearreps: "url('/year reps.jpg')",
         techteam:"url('/techteam.jpg')",
+        ia:"url('/ia.jpg')",
+        marketing:"url('/marketing2.jpg')",
+        pd:"url('/pd.jpg')",
 
       },
       screens: {
