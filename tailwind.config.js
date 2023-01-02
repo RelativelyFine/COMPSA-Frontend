@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     fontFamily: {
       CascadiaCode: ["CascadiaCode"],
+      inter: ["Inter", "sans-serif"],
     },
     extend: {
       backgroundImage: {
