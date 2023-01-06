@@ -9,11 +9,11 @@ const P2P = () => {
   return (
     <div className='bg-[#FCFCFC]'>
       <h1 className='font-inter font-bold tracking-wider text-[#553ADD] text-center text-3xl pt-8'>P2P MENTORSHIP PROGRAM</h1>
-      <h3 className='font-inter font-normal text-center text-[#200263] text-lg pt-3 pb-12'>Take a look at what we've been working on!</h3>
+      <h3 className='font-inter font-normal text-center text-[#200263] text-lg pt-3 pb-12'>Take a look at what we&apos;ve been working on!</h3>
       <div className='flex justify-center items-center flex-wrap mb-8 gap-10'>
         <div className='bg-[#DAD2FF] rounded-lg pl-5 py-5 w-1/2 h-52'>
           <h3 className='font-inter font-bold tracking-wide text-[#200263] text-lg'>WHAT IS P2P?</h3>
-          <text className='font-inter font-normal text-[#200263] text-sm'>Insert bio here:)</text>
+          <text className='font-inter font-normal text-[#200263] text-sm'>Insert bio here</text>
         </div>
         <div className='rounded-2xl w-1/2 mx-8 h-52 sm:mx-0 sm:w-1/4 mobileabout:w-52'>
             <Image className='h-full w-full' src={placeholder} alt="Placeholder Image" />
