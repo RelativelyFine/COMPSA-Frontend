@@ -24,6 +24,11 @@ const Mainpage = () => {
       <div className=" container-style w-full h-[60vw] text-center bg-gradient-to-b from-[#7762E0] to-[#EEEBFD] text-white"></div>
       <div className="absolute top-0 right-0 w-full h-[60vw] bg-laptopSwirl bg-cover"></div>
       <div className="grid w-full h-[70vw] md:h-[50vw] px-[4%] bg-[#EEEBFD]">
+        <Link href="https://forms.gle/a2AHSGKdCdM7kJ1w9" className="flex justify-center align-middle">
+            <button className="transition px-[5vw] transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none font-bold bg-[#320B89] text-white rounded-xl text-[1em] sm:text-[2vw]">
+              School of Computing Funding Petition
+            </button>
+        </Link>
         <div className="self-center w-full text-center text-[2em] sm:text-[4vw] text-[#200263] font-bold leading-none">
           Upcoming Events <br />
         </div>
