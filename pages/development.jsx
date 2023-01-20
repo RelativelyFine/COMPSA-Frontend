@@ -1,14 +1,14 @@
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Signup from "../components/SignUp/Signup";
+import InDevelopment from "../components/DevelopmentPages/InDevelopment";
 import Footer from "../components/Footer";
 
-export default function Home() {
+export default function Homepage() {
   return (
     <div>
       <Header />
-      <Signup />
-      <Navbar color="dark" />
+      <InDevelopment />
+      <Navbar color="light" />
       <Footer />
     </div>
   );

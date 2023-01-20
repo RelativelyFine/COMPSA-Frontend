@@ -189,7 +189,7 @@ const Signup = () => {
       });
   };
 
-  if (!useAlias) {
+  if (error) {
     return (
       <>
         <div className="flex w-full h-[70px] bg-[#461C6F]"></div>
