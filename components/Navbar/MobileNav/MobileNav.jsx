@@ -12,6 +12,7 @@ import navItems from "../navItems";
 import MobileNavItem from "./MobileNavItem";
 import SocialMediaItem from "./SocialMediaItem";
 import CircuitSubMenu from "../CircuitSubMenu";
+import Link from "next/link";
 
 const MobileNav = ({ handleNav, nav }) => (
   <div
@@ -23,7 +24,7 @@ const MobileNav = ({ handleNav, nav }) => (
       className={
         nav
           ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#f6f1ff] p-10 ease-in duration-500"
-          : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+          : "fixed left-[-120%] top-0 p-10 ease-in duration-500"
       }
     >
       <div>
@@ -52,9 +53,26 @@ const MobileNav = ({ handleNav, nav }) => (
           <li>
             <CircuitSubMenu isMobile={true} />
           </li>
-          {navItems.map((item) => (
-            <MobileNavItem key={item.text} {...item} />
-          ))}
+          <Link href="/">
+            <li className="w-full justify-center rounded-md px-4 py-5 text-xl font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-black hover:text-yellow-500">
+              Home
+            </li>
+          </Link>
+          <Link href="/about">
+            <li className="w-full justify-center rounded-md px-4 py-5 text-xl font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-black hover:text-yellow-500">
+              About
+            </li>
+          </Link>
+          <Link href="/resources">
+            <li className="w-full justify-center rounded-md px-4 py-5 text-xl font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-black hover:text-yellow-500">
+              Resources
+            </li>
+          </Link>
+          <Link href="/contact">
+            <li className="w-full justify-center rounded-md px-4 py-5 text-xl font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-black hover:text-yellow-500">
+              Contact
+            </li>
+          </Link>
         </ul>
         <div className="pt-20">
           <p className="uppercase tracking-widest text-black font-bold pb-5">
