@@ -47,7 +47,7 @@ const About = () => {
                 </div>
               </div>
               <div className="pt-[0.5vw]">
-                <Link href="">
+                <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
                     Executives Homepage
                   </div>
@@ -78,7 +78,7 @@ const About = () => {
                 </div>
               </div>
               <div className="pt-[0.5vw]">
-                <Link href="">
+                <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
                     Year Reps Homepage
                   </div>
@@ -112,7 +112,7 @@ const About = () => {
                 </div>
               </div>
               <div className="pt-[0.5vw]">
-                <Link href="">
+                <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
                     Academics Homepage
                   </div>
@@ -141,7 +141,7 @@ const About = () => {
                 </div>
               </div>
               <div className="pt-[0.5vw]">
-                <Link href="">
+                <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
                     Equity Homepage
                   </div>
@@ -173,7 +173,7 @@ const About = () => {
                 </div>
               </div>
               <div className="pt-[0.5vw]">
-                <Link href="">
+                <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
                     Events Homepage
                   </div>
@@ -187,9 +187,12 @@ const About = () => {
             <div className="col-span-5 bg-techteam bg-cover rounded-3xl h-[29vw]"></div>
             <div className="flex flex-col col-span-7 ">
               <div className=" bg-[#DAD2FF] h-[23vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
-                <div className="text-[4vw] text-[#200263] pb-[1%]">Tech Team</div>
+                <div className="text-[4vw] text-[#200263] pb-[1%]">
+                  Tech Team
+                </div>
                 <div className=" text-[#200263] pb-[1%]">
-                  Frontend Developer -&gt; David Courtis, Kunalan Kevin Subagaran
+                  Frontend Developer -&gt; David Courtis, Kunalan Kevin
+                  Subagaran
                 </div>
                 <div className=" text-[#200263] pb-[1%]">
                   Frontend Intern -&gt; Adwait Srivastava, Amaan Javed
@@ -197,14 +200,14 @@ const About = () => {
                 <div className="text-[#200263] pb-[1%]">
                   Backend Developer -&gt; Logan Cantin
                 </div>
-                
+
                 <div className=" text-[#200263] pb-[1%]">
                   Backend Intern -&gt; Nathan Cai
                 </div>
                 <div className=" text-[#200263] pb-[1%]">
-                  UI/UX Designer  -&gt; Amy Cui
+                  UI/UX Designer -&gt; Amy Cui
                 </div>
-              
+
                 <div className=" text-[#200263] pb-[1%]">
                   UI/UX Intern -&gt; Anna Lou
                 </div>
@@ -213,7 +216,7 @@ const About = () => {
                 </div>
               </div>
               <div className="pt-[0.5vw]">
-                <Link href="">
+                <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
                     Tech Team Homepage
                   </div>
@@ -227,7 +230,9 @@ const About = () => {
             <div className="col-span-5 bg-ia bg-cover rounded-3xl h-[25vw]"></div>
             <div className="flex flex-col col-span-7 ">
               <div className=" bg-[#DAD2FF] h-[19vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
-                <div className="text-[4vw] text-[#200263] pb-[1%]">Internal Affairs</div>
+                <div className="text-[4vw] text-[#200263] pb-[1%]">
+                  Internal Affairs
+                </div>
                 <div className=" text-[#200263] pb-[1%]">
                   Internal Affairs Director -&gt; Kaan Sümer
                 </div>
@@ -242,7 +247,7 @@ const About = () => {
                 </div>
               </div>
               <div className="pt-[0.5vw]">
-                <Link href="">
+                <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
                     Internal Affairs Homepage
                   </div>
@@ -256,7 +261,9 @@ const About = () => {
             <div className="col-span-5 bg-marketing bg-cover rounded-3xl h-[31vw] px-[10%]"></div>
             <div className="flex flex-col col-span-7 ">
               <div className=" bg-[#DAD2FF] h-[26vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
-                <div className="text-[4vw] text-[#200263] pb-[1%]">Marketing</div>
+                <div className="text-[4vw] text-[#200263] pb-[1%]">
+                  Marketing
+                </div>
                 <div className=" text-[#200263] pb-[1%]">
                   Marketing Director -&gt; Liv Elliott
                 </div>
@@ -270,20 +277,20 @@ const About = () => {
                   Merchandise Coordinator -&gt; Sara Hall
                 </div>
                 <div className=" text-[#200263] pb-[1%]">
-                  Photographer -&gt; Anishka Barran 
+                  Photographer -&gt; Anishka Barran
                 </div>
                 <div className=" text-[#200263] pb-[1%]">
-                  Social Media Coordinatior-&gt; Hannah Larsen  
+                  Social Media Coordinatior-&gt; Hannah Larsen
                 </div>
                 <div className=" text-[#200263] pb-[1%]">
-                  Webmaster -&gt; David Courtis  
+                  Webmaster -&gt; David Courtis
                 </div>
                 <div className=" text-[#200263] pb-[1%]">
                   Outreach Coordinator -&gt; Shauna Tuinstra
                 </div>
               </div>
               <div className="pt-[0.5vw]">
-                <Link href="">
+                <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
                     Marketing Homepage
                   </div>
@@ -297,14 +304,13 @@ const About = () => {
             <div className="col-span-5 bg-pd bg-cover rounded-3xl h-[25vw]"></div>
             <div className="flex flex-col col-span-7 ">
               <div className=" bg-[#DAD2FF] h-[19vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
-                <div className="text-[4vw] text-[#200263] pb-[1%]">Professional Development</div>
-                <div className=" text-[#200263] pb-[1%]">
-                  Vanishta Uthra
+                <div className="text-[4vw] text-[#200263] pb-[1%]">
+                  Professional Development
                 </div>
-                
+                <div className=" text-[#200263] pb-[1%]">Vanishta Uthra</div>
               </div>
               <div className="pt-[0.5vw]">
-                <Link href="">
+                <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
                     P.D Homepage
                   </div>
