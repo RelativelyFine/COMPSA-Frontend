@@ -190,6 +190,12 @@ const Signup = () => {
   };
 
   if (error) {
+    if (!localStorage.getItem("foo")) {
+      localStorage.setItem("foo", "no reload");
+      location.reload();
+    } else {
+      localStorage.removeItem("foo");
+    }
     return (
       <>
         <div className="flex w-full h-[70px] bg-[#461C6F]"></div>
@@ -197,8 +203,7 @@ const Signup = () => {
           <div className="w-[30vw] h-[30vw] bg-#461C6F bg-qbert bg-cover self-center justify-self-center absolute top-[15%] md:top-[0%] md:relative"></div>
           <div className="grid place-content-center self-center justify-self-center bg-[#B9B4CE] w-[80%] md:h py-[5vh] rounded-3xl absolute top-[15%] md:top-[0%] md:relative">
             <div className="text-[#2e1844] text-[3vw] px-20 text-center">
-              We are currently experiencing issues. <br /> Please try again
-              later...
+              Waiting for service...
               <Link
                 href="/homepage"
                 className="flex justify-center align-middle pt-[10%]"

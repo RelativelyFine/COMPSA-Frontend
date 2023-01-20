@@ -102,6 +102,26 @@ function InfiniteCSRPage() {
                                 </div>
                               </a>
                             </div>
+                            <div className="self-end text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">
+                              <a
+                                target="_blank"
+                                href={link}
+                                rel="noopener noreferrer"
+                              >
+                                <div
+                                  className=" bg-[#461C6E] w-full px-2 py-[1.2vw]
+                          xl:py-[1em] text-center rounded-3xl justify-self-center cursor-pointer"
+                                >
+                                  <div className="flex flex-row text-[1em] sm:text-[1.9vw] xl:text-[1.7em] ">
+                                    <HiOutlineLocationMarker
+                                      className="relative h-[1em] w-[1em]
+                              xl:h-10 xl:w-10 "
+                                    />
+                                    &nbsp;&nbsp; Click for Link
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
                           </div>
                         </div>
 
