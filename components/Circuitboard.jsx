@@ -13,10 +13,9 @@ import {
 } from "chart.js";
 
 import { Line } from "react-chartjs-2";
-
+import Link from "next/link";
 import useSWR from "swr";
 import axios from "axios";
-import { useRouter } from "next/router";
 
 ChartJS.register(
   TimeScale,
@@ -37,14 +36,12 @@ const fetcher = (url) =>
       },
     })
     .then((response) => {
-      console.log(response);
-
       return response.data;
     });
 
 const Circuitboard = () => {
   const dataset0 = {
-    label: "Unassigned",
+    label: "We",
     backgroundColor: "rgba(174, 24, 41, 0.4)",
     borderColor: "rgba(174, 24, 41, 1)",
     pointBorderColor: "rgba(174, 24, 41, 1)",
@@ -52,7 +49,7 @@ const Circuitboard = () => {
     data: [],
   };
   const dataset1 = {
-    label: "Unassigned",
+    label: "Are",
     backgroundColor: "rgba(227, 52, 47,0.4)",
     borderColor: "rgba(227, 52, 47,1)",
     pointBorderColor: "rgba(227, 52, 47,1)",
@@ -60,7 +57,7 @@ const Circuitboard = () => {
     data: [],
   };
   const dataset2 = {
-    label: "Unassigned",
+    label: "Loading",
     backgroundColor: "rgba(246, 153, 63,0.4)",
     borderColor: "rgba(246, 153, 63,1)",
     pointBorderColor: "rgba(246, 153, 63,1)",
@@ -68,7 +65,7 @@ const Circuitboard = () => {
     data: [],
   };
   const dataset3 = {
-    label: "Unassigned",
+    label: "Your",
     backgroundColor: "rgba(255, 237, 74,0.4)",
     borderColor: "rgba(255, 237, 74,1)",
     pointBorderColor: "rgba(255, 237, 74,1)",
@@ -76,7 +73,7 @@ const Circuitboard = () => {
     data: [],
   };
   const dataset4 = {
-    label: "Unassigned",
+    label: "Data",
     backgroundColor: "rgba(56, 193, 114,0.4)",
     borderColor: "rgba(56, 193, 114,1)",
     pointBorderColor: "rgba(56, 193, 114,1)",
@@ -84,7 +81,7 @@ const Circuitboard = () => {
     data: [],
   };
   const dataset5 = {
-    label: "Unassigned",
+    label: "Please",
     backgroundColor: "rgba(77, 192, 181,0.4)",
     borderColor: "rgba(77, 192, 181,1)",
     pointBorderColor: "rgba(77, 192, 181,1)",
@@ -92,7 +89,7 @@ const Circuitboard = () => {
     data: [],
   };
   const dataset6 = {
-    label: "Unassigned",
+    label: "Be",
     backgroundColor: "rgba(52, 144, 220,0.4)",
     borderColor: "rgba(52, 144, 220,1)",
     pointBorderColor: "rgba(52, 144, 220,1)",
@@ -100,7 +97,7 @@ const Circuitboard = () => {
     data: [],
   };
   const dataset7 = {
-    label: "Unassigned",
+    label: "Patient",
     backgroundColor: "rgba(101, 116, 205,0.4)",
     borderColor: "rgba(101, 116, 205,1)",
     pointBorderColor: "rgba(101, 116, 205,1)",
@@ -108,7 +105,7 @@ const Circuitboard = () => {
     data: [],
   };
   const dataset8 = {
-    label: "Unassigned",
+    label: "<3...",
     backgroundColor: "rgba(149, 97, 226,0.4)",
     borderColor: "rgba(149, 97, 226,1)",
     pointBorderColor: "rgba(149, 97, 226,1)",
@@ -116,7 +113,7 @@ const Circuitboard = () => {
     data: [],
   };
   const dataset9 = {
-    label: "Unassigned",
+    label: "Loading...",
     backgroundColor: "rgba(246, 109, 155,0.4)",
     borderColor: "rgba(246, 109, 155,1)",
     pointBorderColor: "rgba(246, 109, 155,1)",
@@ -125,7 +122,6 @@ const Circuitboard = () => {
   };
 
   const [teams, setTeams] = useState([]);
-  const router = useRouter();
   const [dataset, setDataset] = useState({
     datasets: [
       dataset0,
@@ -145,7 +141,6 @@ const Circuitboard = () => {
 
   useEffect(() => {
     if (data) {
-      console.log(data);
       setTeams(circuitOiler(data));
     }
   }, [data]);
@@ -159,6 +154,22 @@ const Circuitboard = () => {
       return prevState;
     });
   }, [teams]);
+
+  if (error) {
+    return (
+      <div className="text-white text-[3vw] text-center">
+        We are currently experiencing issues. <br /> Please try again later...
+        <Link
+          href="/homepage"
+          className="flex justify-center align-middle pt-[10%]"
+        >
+          <button className="transition px-[5vw] py-[2%] transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none font-bold bg-white text-[#2e1844] rounded-xl text-[1em] sm:text-[2vw]">
+            Homepage
+          </button>
+        </Link>
+      </div>
+    );
+  }
 
   function circuitOiler(json) {
     var x = json.sort((a, b) => {
@@ -220,10 +231,6 @@ const Circuitboard = () => {
       },
     },
   };
-
-  if (error) {
-    router.reload();
-  }
 
   return (
     <div className="bg-gradient-to-b from-[#ffffff] to-[#dadada] rounded-3xl">

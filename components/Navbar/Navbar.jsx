@@ -51,7 +51,7 @@ const Navbar = (props) => {
               <Link href={href} key={text}>
                 <button>
                   <li
-                    className={`ml-10 text-lg hover:border-b font-bold transition transform hover:-translate-y-[2px] motion-reduce:transition-none motion-reduce:hover:transform-none ${colortheme(
+                    className={`ml-10 pt-1.5 text-lg hover:border-b font-bold transition transform hover:-translate-y-[2px] motion-reduce:transition-none motion-reduce:hover:transform-none ${colortheme(
                       props.color,
                       "text"
                     )}`}

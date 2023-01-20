@@ -4,6 +4,7 @@ import { useInfiniteQuery } from "react-query";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { HiOutlineLocationMarker, HiCash } from "react-icons/hi";
+import Link from "next/link";
 
 function InfiniteCSRPage() {
   const { data, status, fetchNextPage, hasNextPage } = useInfiniteQuery(
@@ -21,13 +22,28 @@ function InfiniteCSRPage() {
       },
     }
   );
-
-  if (!data) {
+  if (status == "error") {
     return (
-      <div className="text-center text-2xl font-bold text-white">
+      <div className="text-white text-[3vw] px-20 text-center min-h-[80vh]">
+        We are currently experiencing issues. <br /> Please try again later...
+        <Link
+          href="/homepage"
+          className="flex justify-center align-middle pt-[10%]"
+        >
+          <button className="transition px-[5vw] py-[2%] transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none font-bold bg-white text-[#2e1844] rounded-xl text-[1em] sm:text-[2vw]">
+            Homepage
+          </button>
+        </Link>
+      </div>
+    );
+  } else if (!data) {
+    return (
+      <div className="text-center text-[2vw] font-bold text-white min-h-[80vh]">
         <br />
         <br />
         Loading....
+        <br />
+        <br />
       </div>
     );
   }

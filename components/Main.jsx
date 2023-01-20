@@ -9,7 +9,7 @@ function App() {
       <div className="flex w-screen h-[70px] bg-[#461C6F]"></div>
 
       <div className="flex bg-[#461C6F] w-screen">
-        <div className="flex flex-col grid w-screen text-center bg-gradient-to-b from-[#8359AD] to-[#644683]">
+        <div className="flex-col grid w-screen text-center bg-gradient-to-b from-[#8359AD] to-[#644683]">
           <div className="flex flex-col w-[50vw] text-center bg-gradient-to-b from-[#8359AD] to-[#644683] justify-self-center">
             <img src="/circuits.svg" alt="/" className="w-full pt-20" />
           </div>

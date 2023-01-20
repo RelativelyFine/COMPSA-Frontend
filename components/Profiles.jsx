@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useInfiniteQuery } from "react-query";
+import Link from "next/link";
 
 function InfiniteCSRPage() {
   const { data, status, fetchNextPage, hasNextPage } = useInfiniteQuery(
@@ -21,7 +22,23 @@ function InfiniteCSRPage() {
     }
   );
 
-  if (!data) {
+  console.log(status);
+
+  if (status == "error") {
+    return (
+      <div className="text-white text-[3vw]">
+        Maybe we don&lsquo;t get enough funds... <br />
+        <Link
+          href="https://forms.gle/a2AHSGKdCdM7kJ1w9"
+          className="flex justify-center align-middle pt-[10%]"
+        >
+          <button className="transition px-[5vw] py-[2%] transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none font-bold bg-white text-[#2e1844] rounded-xl text-[1em] sm:text-[2vw]">
+            School of Computing Funding Petition
+          </button>
+        </Link>
+      </div>
+    );
+  } else if (!data) {
     return <div className="text-white text-[5vw]">Loading...</div>;
   }
 
@@ -38,7 +55,7 @@ function InfiniteCSRPage() {
   };
 
   // Create an empty dictionary to store player information
-  const players = {}
+  const players = {};
 
   const populate_players = (value) => {
     // Algorithm to add information from API request into the players dictionary
@@ -48,21 +65,20 @@ function InfiniteCSRPage() {
       if (players[`${value.place}`].includes(value.alias) == false) {
         players[`${value.place}`].push(value.alias);
       }
-    // If the players rank doesn't exist within the players dictionary
+      // If the players rank doesn't exist within the players dictionary
     } else {
       // Create an empty array for that specific rank and then add the players name to the array
       players[`${value.place}`] = [];
       players[`${value.place}`].push(value.alias);
     }
-  }
+  };
 
   const determine_score = (value) => {
     const tied_players = players[`${value.place}`].length; // The number of players tied for a position
     const rank = value.place; // The position that players are tied for
     const displayed_rank = tied_players + rank - 1;
     return displayed_rank;
-  }
-
+  };
 
   return (
     <div className="">
@@ -73,15 +89,15 @@ function InfiniteCSRPage() {
           hasMore={hasNextPage}
           loader={<h4>Loading...</h4>}
         >
-          {data?.pages.map((page) =>
-          {Array.from(page)?.map((value, index) => ( 
-            <>{populate_players(value)}</>
-          ))}
-          )}
+          {data?.pages.map((page) => {
+            Array.from(page)?.map((value, index) => (
+              <>{populate_players(value)}</>
+            ));
+          })}
           {data?.pages.map((page) => {
             return (
               <>
-                {Array.from(page)?.map((value, index) => ( 
+                {Array.from(page)?.map((value, index) => (
                   <div
                     className="flex w-[90vw] justify-center justify-self-center"
                     key={index}
@@ -95,7 +111,7 @@ function InfiniteCSRPage() {
                       >
                         <div>
                           <span className="bg-white text-[#eaba7d] p-2 rounded-xl">
-                          {determine_score(value)}
+                            {determine_score(value)}
                           </span>
                           <span className="">
                             &nbsp;&nbsp;&nbsp;{value.alias}

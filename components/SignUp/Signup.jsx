@@ -3,6 +3,7 @@ import Image from "next/image";
 import useSWR from "swr";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const fetcher = (url) => axios.get(url, {}).then((response) => response.data);
 
@@ -15,8 +16,8 @@ const Signup = () => {
           <Image
             src="/logo.png"
             alt="/"
-            width="40vw"
-            height="40vw"
+            width="40"
+            height="40"
             min-width="10"
           />
         </div>
@@ -58,8 +59,8 @@ const Signup = () => {
             <Image
               src="/logo.png"
               alt="/"
-              width="40vw"
-              height="40vw"
+              width="40"
+              height="40"
               min-width="10"
             />
           </div>
@@ -115,8 +116,8 @@ const Signup = () => {
             <Image
               src="/logo.png"
               alt="/"
-              width="40vw"
-              height="40vw"
+              width="40"
+              height="40"
               min-width="10"
             />
           </div>
@@ -188,8 +189,29 @@ const Signup = () => {
       });
   };
 
-  if (error) {
-    router.reload();
+  if (!useAlias) {
+    return (
+      <>
+        <div className="flex w-full h-[70px] bg-[#461C6F]"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 md:flex-col w-full h-[90vh] bg-[#461C6F] ">
+          <div className="w-[30vw] h-[30vw] bg-#461C6F bg-qbert bg-cover self-center justify-self-center absolute top-[15%] md:top-[0%] md:relative"></div>
+          <div className="grid place-content-center self-center justify-self-center bg-[#B9B4CE] w-[80%] md:h py-[5vh] rounded-3xl absolute top-[15%] md:top-[0%] md:relative">
+            <div className="text-[#2e1844] text-[3vw] px-20 text-center">
+              We are currently experiencing issues. <br /> Please try again
+              later...
+              <Link
+                href="/homepage"
+                className="flex justify-center align-middle pt-[10%]"
+              >
+                <button className="transition px-[5vw] py-[2%] transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none font-bold bg-[#2e1844] text-white rounded-xl text-[1em] sm:text-[2vw]">
+                  Homepage
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </>
+    );
   }
 
   if (data) {

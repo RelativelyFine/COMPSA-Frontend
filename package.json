@@ -12,6 +12,8 @@
     "svg": "svgr -d public/assets public/assets/icons"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.4.9",
+    "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@fontsource/cascadia-code": "^4.2.1",
@@ -27,6 +29,7 @@
     "date-fns": "^2.29.2",
     "downshift": "^6.1.9",
     "embla-carousel-react": "^7.0.1",
+    "framer-motion": "^8.5.0",
     "i": "^0.3.7",
     "next": "^13.0.2",
     "next-images": "^1.8.4",
