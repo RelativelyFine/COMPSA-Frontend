@@ -95,7 +95,7 @@ const CircuitSubMenu = ({ isMobile }) => (
             </Link>
           </div>
           <div className="px-1 py-1">
-            <Link href="/circuit/login">
+            <Link href="/login">
               <Menu.Item>
                 {({ active }) => (
                   <button

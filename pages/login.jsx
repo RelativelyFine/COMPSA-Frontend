@@ -1,7 +1,7 @@
-import Header from "../../components/Header";
-import Navbar from "../../components/Navbar";
-import Signup from "../../components/Circuit/SignUp/Signup";
-import Footer from "../../components/FooterCollection/Footer";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Signup from "../components/Circuit/SignUp/Signup";
+import Footer from "../components/FooterCollection/Footer";
 import { useRouter } from "next/router";
 
 export default function Home() {
