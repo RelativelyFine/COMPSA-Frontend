@@ -2,7 +2,12 @@ import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import { ArchiveIcon, EditIcon, DuplicateIcon, DeleteIcon } from "../Icons";
+import {
+  HiOutlineTicket,
+  HiOutlineSparkles,
+  HiOutlineHome,
+  HiOutlineStar,
+} from "react-icons/hi";
 
 const CircuitSubMenu = ({ isMobile }) => (
   <div>
@@ -43,8 +48,11 @@ const CircuitSubMenu = ({ isMobile }) => (
                       active ? "bg-violet-500 text-white" : "text-gray-900"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    <ArchiveIcon active={active} />
-                    Circuit Home
+                    <HiOutlineHome
+                      className={`h-5 w-5 ${active ? "" : "text-[#A78BFA]"}`}
+                      aria-hidden="true"
+                    />
+                    &nbsp; Circuit Home
                   </button>
                 )}
               </Menu.Item>
@@ -59,8 +67,11 @@ const CircuitSubMenu = ({ isMobile }) => (
                       active ? "bg-violet-500 text-white" : "text-gray-900"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    <EditIcon active={active} />
-                    CircuitBoard
+                    <HiOutlineStar
+                      className={`h-5 w-5 ${active ? "" : "text-[#A78BFA]"}`}
+                      aria-hidden="true"
+                    />
+                    &nbsp; CircuitBoard
                   </button>
                 )}
               </Menu.Item>
@@ -73,8 +84,11 @@ const CircuitSubMenu = ({ isMobile }) => (
                       active ? "bg-violet-500 text-white" : "text-gray-900"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    <DuplicateIcon active={active} />
-                    Event List
+                    <HiOutlineTicket
+                      className={`h-5 w-5 ${active ? "" : "text-[#A78BFA]"}`}
+                      aria-hidden="true"
+                    />
+                    &nbsp; Event List
                   </button>
                 )}
               </Menu.Item>
@@ -89,8 +103,11 @@ const CircuitSubMenu = ({ isMobile }) => (
                       active ? "bg-violet-500 text-white" : "text-gray-900"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
-                    <DeleteIcon active={active} />
-                    Sign Up
+                    <HiOutlineSparkles
+                      className={`h-5 w-5 ${active ? "" : "text-[#A78BFA]"}`}
+                      aria-hidden="true"
+                    />
+                    &nbsp; Sign Up
                   </button>
                 )}
               </Menu.Item>
