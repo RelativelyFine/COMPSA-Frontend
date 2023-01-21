@@ -40,7 +40,7 @@ const CircuitSubMenu = ({ isMobile }) => (
           } mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50`}
         >
           <div className="px-1 py-1">
-            <Link href="/homepage">
+            <Link href="/circuit/circuitHome">
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -59,7 +59,7 @@ const CircuitSubMenu = ({ isMobile }) => (
             </Link>
           </div>
           <div className="px-1 py-1 ">
-            <Link href="/leaderboard">
+            <Link href="/circuit/leaderboard">
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -76,7 +76,7 @@ const CircuitSubMenu = ({ isMobile }) => (
                 )}
               </Menu.Item>
             </Link>
-            <Link href="/events">
+            <Link href="/circuit/events">
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -95,7 +95,7 @@ const CircuitSubMenu = ({ isMobile }) => (
             </Link>
           </div>
           <div className="px-1 py-1">
-            <Link href="/login">
+            <Link href="/circuit/login">
               <Menu.Item>
                 {({ active }) => (
                   <button
@@ -107,7 +107,7 @@ const CircuitSubMenu = ({ isMobile }) => (
                       className={`h-5 w-5 ${active ? "" : "text-[#A78BFA]"}`}
                       aria-hidden="true"
                     />
-                    &nbsp; Sign Up
+                    &nbsp; Sign Up & Login
                   </button>
                 )}
               </Menu.Item>
