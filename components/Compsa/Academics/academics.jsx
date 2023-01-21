@@ -4,7 +4,7 @@ import Feedback from "./course_feedback";
 import Tutor from "./tutor_network";
 import P2P from "./P2P";
 import Exam from "./exam_tutorials";
-import Footer from "../FooterCollection/Footer";
+import Footer from "../../FooterCollection/Footer";
 
 const academics = () => {
   return (
