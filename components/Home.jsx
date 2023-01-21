@@ -13,7 +13,11 @@ const Mainpage = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        setData(json);
+        setData(json).then(() => {
+          if ((json.events.length = 0)) {
+            setError("No Current Events!");
+          }
+        });
       })
       .catch((err) => {
         setError("Currently Unavaliable...");
@@ -24,7 +28,7 @@ const Mainpage = () => {
   return (
     <>
       <div className=" container-style w-full h-[60vw] text-center bg-gradient-to-b from-[#7762E0] to-[#EEEBFD] text-white"></div>
-      <div className="absolute top-0 right-0 w-full h-[60vw] bg-laptopSwirl bg-cover"></div>
+      <div className="absolute top-0 right-0 w-full h-[60vw] bg-laptopSwirl bg-cover z-10"></div>
       <div className="grid w-full h-[70vw] md:h-[50vw] px-[4%] bg-[#EEEBFD]">
         <Link
           href="https://forms.gle/a2AHSGKdCdM7kJ1w9"
@@ -45,22 +49,21 @@ const Mainpage = () => {
             {data && data.events.length > 0 ? (
               data.events.map((item, index) => {
                 return (
-                  <div
-                    key={index}
-                    className="flex flex-col col-span-1 w-[40vw] h-[40vw] md:h-full md:w-full justify-self-center"
-                  >
-                    <div className="bg-[#553ADD] h-[100%] px-[3vw] py-[3vw] rounded-2xl font-bold text-white">
-                      <div className="text-[2.5em] sm:text-[4vw] leading-none">
-                        {item.date.slice(4, 7)}
-                      </div>
-                      <div className="text-[1.6em] sm:text-[2vw] leading-none pb-[2vw]">
-                        {item.date.slice(7, 11)}
-                      </div>
-                      <div className="text-[1em] sm:text-[2vw] pb-[1%] font-normal">
-                        {item.title}
+                  <Link href="/events" key={index}>
+                    <div className="flex flex-col col-span-1 w-[40vw] h-[40vw] md:h-full md:w-full justify-self-center">
+                      <div className="bg-[#553ADD] h-[100%] px-[3vw] py-[3vw] rounded-2xl font-bold text-white">
+                        <div className="text-[2.5em] sm:text-[4vw] leading-none">
+                          {item.date.slice(4, 7)}
+                        </div>
+                        <div className="text-[1.6em] sm:text-[2vw] leading-none pb-[2vw]">
+                          {item.date.slice(7, 11)}
+                        </div>
+                        <div className="text-[1em] sm:text-[1.7vw] pb-[1%] font-normal">
+                          {item.title}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })
             ) : (
