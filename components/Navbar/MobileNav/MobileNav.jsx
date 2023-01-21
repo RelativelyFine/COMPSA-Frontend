@@ -35,10 +35,7 @@ const MobileNav = ({ handleNav, nav }) => (
             width="80"
             height="80"
           />
-          <div
-            onClick={handleNav}
-            className="square-full shadow-lg shadow-grey-700 cursor-pointer"
-          >
+          <div onClick={handleNav} className="square-full cursor-pointer">
             <AiOutlineMenuFold size={50} />
           </div>
         </div>

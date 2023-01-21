@@ -36,7 +36,7 @@ const Navbar = (props) => {
         "background"
       )}`}
     >
-      <div className="flex justify-between items-center w-full h-full px-2 align-items 2xl:px-8">
+      <div className="flex justify-between items-center w-full h-full pl-2 pr-8 align-items 2xl:px-8">
         <div className="flex h-10 w-10">
           <Image
             src="/logo.png"
@@ -67,9 +67,9 @@ const Navbar = (props) => {
           </ul>
           <div
             onClick={handleNav}
-            className="md:hidden square-full shadow-lg shadow-grey-700 cursor-pointer"
+            className="md:hidden square-full cursor-pointer"
           >
-            <AiOutlineMenuUnfold size={50} className="text-white" />
+            <AiOutlineMenuUnfold size={50} className="text-[#553ADD]" />
           </div>
           <MobileNav handleNav={handleNav} nav={nav} />
         </div>

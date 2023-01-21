@@ -8,6 +8,7 @@
 
 html,body{
   overflow-x: hidden;
+  overflow: overlay;
 }
 
 :root {
@@ -419,3 +420,15 @@ rgba(255, 255, 255, 1);
   background: linear-gradient(90deg, #7f5b50, #7f5b50a0);
 }
 
+::-webkit-scrollbar {
+  background: transparent;
+  width: 15px;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px transparent solid;
+  background: #989898b8;
+  background-clip: padding-box;
+  border-radius: 100px;
+}
