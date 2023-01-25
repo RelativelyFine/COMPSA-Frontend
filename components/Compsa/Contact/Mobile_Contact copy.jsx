@@ -7,7 +7,6 @@ import point from "../../../public/location_pointer.png";
 import form_box from "../../../public/contact_form_box.png";
 import port_box from "../../../public/contact_portdir.png";
 function Mobile_Main() {
-  const [form, setForm] = useState([]);
   return (
     <div className="bg-[#EEEBFD] pt-14">
       <div className="flex flex-row flex-nowrap justify-center pt-3">

@@ -4755,10 +4755,10 @@ raf@^3.1.0:
   dependencies:
     performance-now "^2.1.0"
 
-react-chartjs-2@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.npmjs.org/react-chartjs-2/-/react-chartjs-2-4.2.0.tgz"
-  integrity sha512-9Vm9Sg9XAKiR579/FnBkesofjW9goaaFLfS7XlGTzUJlWFZGSE6A/pBI6+i/bP3pobKZoFcWJdFnjShytToqXw==
+react-chartjs-2@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.npmjs.org/react-chartjs-2/-/react-chartjs-2-4.3.1.tgz"
+  integrity sha512-5i3mjP6tU7QSn0jvb8I4hudTzHJqS8l00ORJnVwI2sYu0ihpj83Lv2YzfxunfxTZkscKvZu2F2w9LkwNBhj6xA==
 
 react-clientside-effect@^1.2.6:
   version "1.2.6"

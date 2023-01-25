@@ -8,10 +8,14 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isLargeScreen] = useMediaQuery("(max-width: 480px)");
+
   const [display, setDisplay] = useState(false);
   useEffect(() => setDisplay(true), []);
+
   const ContactPage = !isLargeScreen ? Desktop : Mobile;
+
   if (!display) return null;
+
   return (
     <div>
       <Header />

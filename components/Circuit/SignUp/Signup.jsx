@@ -170,10 +170,12 @@ const Signup = () => {
       })
       .then(function (response) {
         console.log(response);
-        router.reload();
       })
       .catch(function (error) {
         console.log(error);
+      })
+      .finally(() => {
+        router.reload();
       });
   };
 
@@ -182,10 +184,12 @@ const Signup = () => {
       .post("https://compsa.ca/api/users", {})
       .then(function (response) {
         console.log(response);
-        router.reload();
       })
       .catch(function (error) {
         console.log(error);
+      })
+      .finally(() => {
+        router.reload();
       });
   };
 
