@@ -9,7 +9,7 @@ const About = () => {
         <div className="grid grid-cols-12 gap-[4%] place-content-center w-full h-[50vw] px-[4%] bg-gradient-to-b from-[#eeebfd] to-[#EEEBFD]">
           <div className="flex flex-col col-span-7 bg-[#DAD2FF] h-[25vw] px-[4vw] py-[2vw] rounded-2xl">
             <div className="text-[4vw] text-[#200263] pb-[1%]">
-              What Is Compsa?
+              What Is COMPSA?
             </div>
             <div className="text-[1.4vw] text-[#200263] pb-[2%]">
               Queen&lsquo;s University Computing Students&lsquo; Association
@@ -65,16 +65,13 @@ const About = () => {
                   Year Reps
                 </div>
                 <div className="text-[1.4vw] text-[#200263] pb-[1%]">
-                  First Year -&gt;
+                  First Year -&gt; Caroline Gao, Denis Khatnyuk
                 </div>
                 <div className="text-[1.4vw] text-[#200263] pb-[1%]">
                   Second Year -&gt; Josh Cowan
                 </div>
                 <div className="text-[1.4vw] text-[#200263] pb-[1%]">
                   Third Year -&gt; Yash Patel
-                </div>
-                <div className="text-[1.4vw] text-[#200263]">
-                  Fourth Year -&gt;
                 </div>
               </div>
               <div className="pt-[0.5vw]">
@@ -131,13 +128,10 @@ const About = () => {
                   Equity Director -&gt; Alex Panfilov
                 </div>
                 <div className="text-[#200263] pb-[1%]">
-                  Equity Relations -&gt; Liaison Udit Kapoor
+                  Equity Relations Liaison -&gt; Udit Kapoor
                 </div>
                 <div className=" text-[#200263] pb-[1%]">
                   Mental Health Coordinator -&gt; Karina Verma
-                </div>
-                <div className=" text-[#200263]">
-                  Equity Experience -&gt; Coordinator Kaan Sümer
                 </div>
               </div>
               <div className="pt-[0.5vw]">
@@ -307,12 +301,23 @@ const About = () => {
                 <div className="text-[4vw] text-[#200263] pb-[1%]">
                   Professional Development
                 </div>
-                <div className=" text-[#200263] pb-[1%]">Vanishta Uthra</div>
+                <div className=" text-[#200263] pb-[1%]">
+                  PD Director -&gt; Vanshita Uthra
+                </div>
+                <div className=" text-[#200263] pb-[1%]">
+                  Recruitment Managers -&gt; Kushaal Dutta, Alexandra Lam
+                </div>
+                <div className=" text-[#200263] pb-[1%]">
+                  Resource Managers -&gt; Marcela Rojas, Poppy Li. Cameron de Matos
+                </div>
+                <div className=" text-[#200263] pb-[1%]">
+                  Startup Liaison -&gt; Dominic Guzzo
+                </div>
               </div>
               <div className="pt-[0.5vw]">
                 <Link href="/development">
                   <div className=" bg-[#553ADD] w-[25vw] text-white px-2 py-[1.2vw] text-center rounded-xl justify-self-center text-[2vw]">
-                    P.D Homepage
+                    PD Homepage
                   </div>
                 </Link>
               </div>
