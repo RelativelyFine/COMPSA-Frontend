@@ -7,6 +7,7 @@
     "dev": "next dev -p 3006",
     "export": "next build && next export",
     "build": "next build",
+    "forever": "forever start -c './start.bat' .",
     "start": "next start -p 3006 --keepAliveTimeout 70000 &",
     "lint": "next lint",
     "svg": "svgr -d public/assets public/assets/icons"
