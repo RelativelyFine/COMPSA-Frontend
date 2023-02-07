@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image";
+import OptimizedImageWithFallback from "../ErrorCollection/Fallback";
 import Link from "next/link";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 
@@ -38,7 +38,7 @@ const Navbar = (props) => {
     >
       <div className="flex justify-between items-center w-full h-full pl-2 pr-8 align-items 2xl:px-8">
         <div className="flex h-10 w-10">
-          <Image
+          <OptimizedImageWithFallback
             src="/logo.png"
             alt="Compsa logo in purple"
             width="40"

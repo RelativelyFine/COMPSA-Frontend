@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import Arrow_left from "../../../public/acad_arrow_l.png";
-import Arrow_right from "../../../public/acad_arrow_r.png";
+import OptimizedImageWithFallback from "../../ErrorCollection/Fallback";
+import Arrow_left from "/public/acad_arrow_l.png";
+import Arrow_right from "/public/acad_arrow_r.png";
 
 const exam_tutorials = () => {
   return (
@@ -13,19 +13,31 @@ const exam_tutorials = () => {
       <div className="flex justify-center pb-8 gap-10">
         <Link href="/" className="block sm:hidden">
           <button className="">
-            <Image className="h-9 w-8" src={Arrow_left} alt="Left Arrow" />
+            <OptimizedImageWithFallback
+              className="h-9 w-8"
+              src={Arrow_left}
+              alt="Left Arrow"
+            />
           </button>
         </Link>
         <Link href="/" className="block sm:hidden">
           <button className="">
-            <Image className="h-9 w-8" src={Arrow_right} alt="Right Arrow" />
+            <OptimizedImageWithFallback
+              className="h-9 w-8"
+              src={Arrow_right}
+              alt="Right Arrow"
+            />
           </button>
         </Link>
       </div>
       <div className="flex justify-center sm:justify-around flex-wrap items-center gap-20 sm:gap-0">
         <Link href="/" className="hidden sm:block">
           <button className="">
-            <Image className="h-9 w-8" src={Arrow_left} alt="Left Arrow" />
+            <OptimizedImageWithFallback
+              className="h-9 w-8"
+              src={Arrow_left}
+              alt="Left Arrow"
+            />
           </button>
         </Link>
         <div className="bg-[#553ADD] rounded-lg px-8 py-8 w-1/2 mx-8 sm:mx-0 sm:w-1/4">
@@ -81,7 +93,11 @@ const exam_tutorials = () => {
         </div>
         <Link href="/" className="hidden sm:block">
           <button className="">
-            <Image className="h-9 w-8" src={Arrow_right} alt="Right Arrow" />
+            <OptimizedImageWithFallback
+              className="h-9 w-8"
+              src={Arrow_right}
+              alt="Right Arrow"
+            />
           </button>
         </Link>
       </div>

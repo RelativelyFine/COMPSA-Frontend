@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import OptimizedImageWithFallback from "../../ErrorCollection/Fallback";
 import {
   AiOutlineMenuFold,
   AiFillLinkedin,
@@ -29,7 +29,7 @@ const MobileNav = ({ handleNav, nav }) => (
     >
       <div>
         <div className="flex w-full items-center justify-between">
-          <Image
+          <OptimizedImageWithFallback
             src="/logo.png"
             alt="Compsa logo in purple"
             width="80"

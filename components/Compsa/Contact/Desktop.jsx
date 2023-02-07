@@ -1,6 +1,6 @@
 import { React, useRef } from "react";
-import map from "../../../public/contact_map.jpg";
-import Image from "next/image";
+import map from "/public/contact_map.jpg";
+import OptimizedImageWithFallback from "../../ErrorCollection/Fallback";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
@@ -43,7 +43,7 @@ function Desktop() {
       <div className="flex flex-row flex-wrap justify-center gap-14 mb-8">
         <div className="flex-grow ml-[6vw] w-[3vw] flex flex-col justify-center items-center">
           <div className="w-fit h-fit justify-center">
-            <Image
+            <OptimizedImageWithFallback
               src={map}
               className="w-full h-full object-cover rounded-3xl"
               alt="Map of COMPSA Office"

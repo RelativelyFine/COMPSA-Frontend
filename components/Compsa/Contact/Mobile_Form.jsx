@@ -1,6 +1,6 @@
 import { React, useRef } from "react";
-import Image from "next/image";
-import arrow from "../../../public/back_arrow.png";
+import OptimizedImageWithFallback from "../../ErrorCollection/Fallback";
+import arrow from "/public/back_arrow.png";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
 
@@ -37,7 +37,7 @@ function Mobile_Form() {
       <div className="flex flex-row flex-nowrap gap-x-10 pt-3">
         <Link href="/contact">
           <button className="ml-4">
-            <Image src={arrow} alt="Back Arrow" />
+            <OptimizedImageWithFallback src={arrow} alt="Back Arrow" />
           </button>
         </Link>
         <div className="font-inter font-normal tracking-widest text-black text-4xl">
@@ -48,7 +48,7 @@ function Mobile_Form() {
         <form className="w-4/6 pt-2 mt-10" onSubmit={handleSubmit} ref={form}>
           <div className="flex bg-white rounded-[7%] justify-center">
             <div className="w-[95%] h-fit">
-              {/*<Image src={contact_box} alt="Contact Box" />*/}
+              {/*<OptimizedImageWithFallback src={contact_box} alt="Contact Box" />*/}
               <div className="text-center text-gray-600 pt-2 px-5 text-[3.7vw]">
                 Note: If you would like us to get back to you personally, please
                 leave your email!

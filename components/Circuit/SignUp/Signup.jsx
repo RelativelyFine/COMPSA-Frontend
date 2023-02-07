@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import Image from "next/image";
+import OptimizedImageWithFallback from "../../ErrorCollection/Fallback";
 import useSWR from "swr";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -13,7 +13,7 @@ const Signup = () => {
     return (
       <>
         <div className="justify-self-center ">
-          <Image
+          <OptimizedImageWithFallback
             src="/logo.png"
             alt="/"
             width="40"
@@ -23,7 +23,12 @@ const Signup = () => {
         </div>
         <div className="text-center text-[15vw] md:text-[5vw]">SIGN UP</div>
         <div className="w-[70%] justify-self-center">
-          <Image src="/progress.png" alt="/" width="1291" height="100" />
+          <OptimizedImageWithFallback
+            src="/progress.png"
+            alt="/"
+            width="1291"
+            height="100"
+          />
         </div>
         <div className="flex justify-center flex-row py-[3vh]">
           <button
@@ -56,7 +61,7 @@ const Signup = () => {
       return (
         <>
           <div className="justify-self-center ">
-            <Image
+            <OptimizedImageWithFallback
               src="/logo.png"
               alt="/"
               width="40"
@@ -66,7 +71,12 @@ const Signup = () => {
           </div>
           <div className="text-center text-[4em] md:text-[5vw]">SIGN UP</div>
           <div className="w-[70%] justify-self-center">
-            <Image src="/progress2.png" alt="/" width="1291" height="100" />
+            <OptimizedImageWithFallback
+              src="/progress2.png"
+              alt="/"
+              width="1291"
+              height="100"
+            />
           </div>
           <div className="flex justify-center flex-row pt-[2vh] text-[1.5em] md:text-[2vw]">
             You will sign up as:
@@ -113,7 +123,7 @@ const Signup = () => {
       return (
         <>
           <div className="justify-self-center ">
-            <Image
+            <OptimizedImageWithFallback
               src="/logo.png"
               alt="/"
               width="40"
@@ -123,7 +133,12 @@ const Signup = () => {
           </div>
           <div className="text-center text-[4em] md:text-[5vw]">SIGN UP</div>
           <div className="w-[70%] justify-self-center">
-            <Image src="/progress2.png" alt="/" width="1291" height="100" />
+            <OptimizedImageWithFallback
+              src="/progress2.png"
+              alt="/"
+              width="1291"
+              height="100"
+            />
           </div>
           <div className="flex justify-center flex-row pt-[2vh] text-[1.5em] md:text-[2vw]">
             Anonymous Name:
@@ -170,12 +185,10 @@ const Signup = () => {
       })
       .then(function (response) {
         console.log(response);
+        router.reload();
       })
       .catch(function (error) {
         console.log(error);
-      })
-      .finally(() => {
-        router.reload();
       });
   };
 
@@ -184,16 +197,18 @@ const Signup = () => {
       .post("https://compsa.ca/api/users", {})
       .then(function (response) {
         console.log(response);
+        router.reload();
       })
       .catch(function (error) {
         console.log(error);
-      })
-      .finally(() => {
-        router.reload();
       });
   };
 
   if (error) {
+    setTimeout(() => {
+      router.reload();
+    }, 5000);
+
     return (
       <>
         <div className="flex w-full h-[70px] bg-[#461C6F]"></div>
@@ -226,7 +241,13 @@ const Signup = () => {
             <div className="w-[30vw] h-[30vw] bg-#461C6F bg-qbert bg-cover self-center justify-self-center absolute top-[15%] md:top-[0%] md:relative"></div>
             <div className="grid place-content-center self-center justify-self-center bg-[#B9B4CE] w-[80%] md:h py-[5vh] rounded-3xl absolute top-[15%] md:top-[0%] md:relative">
               <div className="relative justify-self-center h-[50vw] w-[50vw] md:h-[20vw] md:w-[20vw]">
-                <Image src="/logo.png" alt="/" fill contain min-width="10" />
+                <OptimizedImageWithFallback
+                  src="/logo.png"
+                  alt="/"
+                  fill
+                  contain
+                  min-width="10"
+                />
               </div>
               <div className="flex justify-center text-center flex-row pt-[2vw] text-[6.5vw] md:text-[2.5vw]">
                 Hi, {data.full_name}.<br /> You&lsquo;ve Signed Up!

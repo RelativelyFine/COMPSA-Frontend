@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import Arrow_left from "../../../public/acad_arrow_l.png";
-import Arrow_right from "../../../public/acad_arrow_r.png";
+import OptimizedImageWithFallback from "../../ErrorCollection/Fallback";
+import Arrow_left from "/public/acad_arrow_l.png";
+import Arrow_right from "/public/acad_arrow_r.png";
 
 const tutor_network = () => {
   return (
@@ -16,7 +16,11 @@ const tutor_network = () => {
         <div className="flex flex-row justify-around pt-16 items-center">
           <Link href="/">
             <button className="">
-              <Image className="h-9 w-8" src={Arrow_left} alt="Left Arrow" />
+              <OptimizedImageWithFallback
+                className="h-9 w-8"
+                src={Arrow_left}
+                alt="Left Arrow"
+              />
             </button>
           </Link>
           <div className="bg-[#EEEBFD] rounded-3xl px-8 pt-3 pb-3 w-1/3">
@@ -49,13 +53,17 @@ const tutor_network = () => {
           </div>
           <Link href="/">
             <button className="">
-              <Image className="h-9 w-8" src={Arrow_right} alt="Right Arrow" />
+              <OptimizedImageWithFallback
+                className="h-9 w-8"
+                src={Arrow_right}
+                alt="Right Arrow"
+              />
             </button>
           </Link>
         </div>
 
         <div className="flex flex-row justify-around pt-4 pb-16 items-center">
-          <Image
+          <OptimizedImageWithFallback
             className="h-9 w-8 opacity-0"
             src={Arrow_left}
             alt="Left Arrow"
@@ -70,7 +78,7 @@ const tutor_network = () => {
               tutorname@queensu.ca
             </h2>
           </div>
-          <Image
+          <OptimizedImageWithFallback
             className="h-9 w-8 opacity-0"
             src={Arrow_right}
             alt="Right Arrow"

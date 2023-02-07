@@ -6,7 +6,7 @@ const UpcomingEvents = () => {
   const [error, setError] = React.useState("Loading...");
 
   React.useEffect(() => {
-    fetch("https://compsa.caslab.queensu.ca/api/events?limit=3", {
+    fetch("https://compsa.ca/api/events?limit=3", {
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
@@ -15,7 +15,7 @@ const UpcomingEvents = () => {
       .then((json) => {
         setData(json);
 
-        if (json.total == 0) {
+        if (json.events.length == 0) {
           setError("No Current Events!");
         }
       })
@@ -44,7 +44,7 @@ const UpcomingEvents = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 overflow-hidden gap-[4vw] pt-2 sm:place-content-center h-full w-full px-[6vw]">
           <>
-            {data && data.total > 0 ? (
+            {data && data.events.length > 0 ? (
               data.events.map((item, index) => {
                 return (
                   <Link href="/circuit/events" key={index}>

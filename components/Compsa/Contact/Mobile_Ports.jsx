@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import arrow from "../../../public/back_arrow.png";
+import OptimizedImageWithFallback from "../../ErrorCollection/Fallback";
+import arrow from "/public/back_arrow.png";
 import Link from "next/link";
 
 const Mobile_Ports = () => {
@@ -9,7 +9,7 @@ const Mobile_Ports = () => {
       <div className="flex flex-row flex-nowrap justify-start gap-x-10 pt-3 mb-2">
         <Link href="/contact">
           <button className="ml-4">
-            <Image src={arrow} alt="Back Arrow" />
+            <OptimizedImageWithFallback src={arrow} alt="Back Arrow" />
           </button>
         </Link>
         <h1 className="font-inter font-normal text-center tracking-widest text-black text-4xl">
