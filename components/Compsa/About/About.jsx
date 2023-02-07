@@ -36,10 +36,10 @@ const About = () => {
                 <div className="text-[4vw] text-[#200263] pb-[1.5%]">
                   Executives
                 </div>
-                <div className="text-[1.4vw] text-[#200263] pb-[1%]">
+                <div className="text-[1.4vw] text-[#200263] pb-[3%]">
                   President -&gt; Jagrit Rai
                 </div>
-                <div className="text-[1.4vw] text-[#200263] pb-[1%]">
+                <div className="text-[1.4vw] text-[#200263] pb-[3%]">
                   Vice President of Operations -&gt; Mercy Doan
                 </div>
                 <div className="text-[1.4vw] text-[#200263]">
@@ -64,13 +64,13 @@ const About = () => {
                 <div className="text-[4vw] text-[#200263] pb-[1%]">
                   Year Reps
                 </div>
-                <div className="text-[1.4vw] text-[#200263] pb-[1%]">
+                <div className="text-[1.4vw] text-[#200263] pb-[3%]">
                   First Year -&gt; Caroline Gao, Denis Khatnyuk
                 </div>
-                <div className="text-[1.4vw] text-[#200263] pb-[1%]">
+                <div className="text-[1.4vw] text-[#200263] pb-[3%]">
                   Second Year -&gt; Josh Cowan
                 </div>
-                <div className="text-[1.4vw] text-[#200263] pb-[1%]">
+                <div className="text-[1.4vw] text-[#200263] pb-[3%]">
                   Third Year -&gt; Yash Patel
                 </div>
               </div>
@@ -124,10 +124,10 @@ const About = () => {
             <div className="flex flex-col col-span-7 ">
               <div className=" bg-[#DAD2FF] h-[19vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
                 <div className="text-[4vw] text-[#200263] pb-[1%]">Equity</div>
-                <div className=" text-[#200263] pb-[1%]">
+                <div className=" text-[#200263] pb-[3%]">
                   Equity Director -&gt; Alex Panfilov
                 </div>
-                <div className="text-[#200263] pb-[1%]">
+                <div className="text-[#200263] pb-[3%]">
                   Equity Relations Liaison -&gt; Udit Kapoor
                 </div>
                 <div className=" text-[#200263] pb-[1%]">
@@ -146,9 +146,9 @@ const About = () => {
         </div>
         <div className="grid w-full h-[40vw] px-[4%]">
           <div className="grid grid-cols-12 gap-[4%] place-content-center w-full h-full ">
-            <div className="col-span-5 bg-events bg-cover rounded-3xl h-[25vw]"></div>
+            <div className="col-span-5 bg-events bg-cover rounded-3xl h-[29vw]"></div>
             <div className="flex flex-col col-span-7 ">
-              <div className=" bg-[#DAD2FF] h-[19vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
+              <div className=" bg-[#DAD2FF] h-[23vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
                 <div className="text-[4vw] text-[#200263] pb-[1%]">Events</div>
                 <div className=" text-[#200263] pb-[1%]">
                   Events Director -&gt; Akash Singh
@@ -160,10 +160,16 @@ const About = () => {
                   Social Coordinator -&gt; Arthur Hu
                 </div>
                 <div className=" text-[#200263] pb-[1%]">
-                  Activities Coordinator -&gt; Max Lindsay
+                  Activities Coordinator -&gt; Elise Donszelmann-Lund
+                </div>
+                <div className=" text-[#200263] pb-[1%]">
+                  Events Intern -&gt; Charlie Mayo
+                </div>
+                <div className=" text-[#200263] pb-[1%]">
+                  Logistics Coordinator -&gt; Owen Rochi
                 </div>
                 <div className=" text-[#200263]">
-                  Logistics Coordinator -&gt; Owen Rocchi
+                  Logistics Intern -&gt; Sareena Shrestha
                 </div>
               </div>
               <div className="pt-[0.5vw]">
@@ -295,9 +301,9 @@ const About = () => {
         </div>
         <div className="grid w-full h-[40vw] px-[4%]">
           <div className="grid grid-cols-12 gap-[4%] place-content-center w-full h-full ">
-            <div className="col-span-5 bg-pd bg-cover rounded-3xl h-[25vw]"></div>
+            <div className="col-span-5 bg-pd bg-cover rounded-3xl h-[29vw]"></div>
             <div className="flex flex-col col-span-7 ">
-              <div className=" bg-[#DAD2FF] h-[19vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
+              <div className=" bg-[#DAD2FF] h-[23vw] px-[4vw] py-[vw] rounded-2xl font-bold text-[1.3vw]">
                 <div className="text-[4vw] text-[#200263] pb-[1%]">
                   Professional Development
                 </div>
