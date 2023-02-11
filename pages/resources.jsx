@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Resources from "../components/Resources";
-import Footer from "../components/Footer";
+import Footer from "../components/FooterCollection/Footer";
 
 export default function Home() {
   const topLinks = [

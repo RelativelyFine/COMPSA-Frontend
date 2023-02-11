@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import InDevelopment from "../components/DevelopmentPages/InDevelopment";
-import Footer from "../components/Footer";
+import InDevelopment from "../components/ErrorCollection/InDevelopment";
+import Footer from "../components/FooterCollection/Footer";
 
 export default function Homepage() {
   return (
